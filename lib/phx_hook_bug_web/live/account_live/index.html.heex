@@ -16,7 +16,6 @@
 <table>
   <thead>
     <tr>
-      <th>Balance</th>
       <th>Name</th>
 
       <th></th>
@@ -25,7 +24,6 @@
   <tbody id="accounts">
     <%= for account <- @accounts do %>
       <tr id={"account-#{account.id}"}>
-        <td><%= account.balance %></td>
         <td><%= account.name %></td>
 
         <td>

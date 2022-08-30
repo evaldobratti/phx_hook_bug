@@ -9,12 +9,8 @@
     phx-change="validate"
     phx-submit="save">
   
-    <%= label f, :balance %>
-    <%= number_input f, :balance, step: "any" %>
-    <%= error_tag f, :balance %>
-  
     <%= label f, :name %>
-    <%= text_input f, :name %>
+    <%= text_input f, :name, phx_hook: "InputHook" %>
     <%= error_tag f, :name %>
   
     <div>

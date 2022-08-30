@@ -3,7 +3,6 @@ defmodule PhxHookBug.Entries.Account do
   import Ecto.Changeset
 
   schema "accounts" do
-    field :balance, :decimal
     field :name, :string
 
     timestamps()
@@ -12,7 +11,7 @@ defmodule PhxHookBug.Entries.Account do
   @doc false
   def changeset(account, attrs) do
     account
-    |> cast(attrs, [:balance, :name])
-    |> validate_required([:balance, :name])
+    |> cast(attrs, [:name])
+    |> validate_required([:name])
   end
 end
